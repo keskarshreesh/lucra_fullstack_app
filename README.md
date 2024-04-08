@@ -21,6 +21,10 @@ Supported features:
       - [Client](#client)
 - [Application Flow](#application-flow)
 - [Demo](#demo-video)
+- [Architecture](#architecture)
+  - [Database](#database)
+  - [Server](#server)
+  - [Client](#client)
 - [Future Work](#future-work)
 
 
