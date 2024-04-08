@@ -57,15 +57,14 @@ Replace the following values in the .env file in the `server` directory:
   Change to your MySQL username, default is generally `root`
 3. `DB_PASSWORD`:
   Change to your MySQL password, this is set during installation<br>
-4. Other fields like `HF_API_MAX_TOKENS` and `HF_CHAT_MODEL` can be changed for fine-grained control of the application behaviour or to use a different model, `DB_HOST` and `DB_PORT` are generally the same for a locally running MySQL instance, change if customized during installation
+4. Other fields like `HF_API_MAX_TOKENS` and `HF_CHAT_MODEL` can be changed for fine-grained control of the application behaviour or to use a different model, `DB_HOST` and `DB_PORT` are generally the same for a locally running MySQL instance, change if customized during installation<br>
 
-Run the start script from the `server` directory:<br>
-Server runs on port `5000`<br>
-`python start.py`
+After making the above changes, run the start script from the `server` directory:<br>
+`python start.py` (Server runs on port `5000`) <br>
 #### Client
 Start the Client app from the `client` directory<br>
-`npm start`<br>
-Client runs on the port `3000`<br>
+`npm start` (Client runs on the port `3000`)<br>
+
 
 
 
