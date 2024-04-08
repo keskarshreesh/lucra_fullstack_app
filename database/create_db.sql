@@ -1,0 +1,38 @@
+create database fs_app;
+use fs_app;
+
+CREATE TABLE users (
+  id INT NOT NULL AUTO_INCREMENT,
+  firstname VARCHAR(255) NOT NULL,
+  lastname VARCHAR(255) NOT NULL,
+  username VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE KEY (username),
+  UNIQUE KEY (email)
+);
+
+CREATE TABLE chats (
+  id INT NOT NULL AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  chat_title VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  UNIQUE KEY (chat_title),
+  FOREIGN KEY (user_id) REFERENCES users(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+
+CREATE TABLE messages (
+  id INT NOT NULL AUTO_INCREMENT,
+  message TEXT NOT NULL,
+  chat_role VARCHAR(255) NOT NULL,
+  chat_id INT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  FOREIGN KEY (chat_id) REFERENCES chats(id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
