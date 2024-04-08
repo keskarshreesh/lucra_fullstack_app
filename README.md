@@ -12,13 +12,13 @@ Supported features:
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installing and Running Locally](#install-and-run)
-    -[Installation](#installation)
-      -[Server](#server)
-      -[Client](#client)
-    -[Local Setup](#local-setup)
-      -[Database](#database)
-      -[Server](#server)
-      -[Client](#client)
+    - [Installation](#installation)
+      - [Server](#server)
+      - [Client](#client)
+    - [Local Setup](#local-setup)
+      - [Database](#database)
+      - [Server](#server)
+      - [Client](#client)
 
 
 # Getting Started
