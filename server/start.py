@@ -33,16 +33,20 @@ JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY")
 
 def create_app():
     app = Flask(__name__)
+    # Callback for CORS configuration
     CORS(app, supports_credentials=True, origins=[FRONTEND_BASE_URL])
 
+    # Configure the SQLALCHEMY_DATABASE_URI with credentials and connection information
     app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+pymysql://{DB_USERNAME}:{quote(DB_PASSWORD)}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
 
+    # Set the JWT secret key and expiry, initialize jwt manager
     app.config['JWT_SECRET_KEY'] = JWT_SECRET_KEY
     app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(minutes=60)
     jwt = JWTManager(app)
 
+    # Callback for expired JWT in request header
     @jwt.expired_token_loader
     def expired_token_callback(jwt_header, jwt_payload):
         return jsonify({
@@ -51,6 +55,7 @@ def create_app():
             'message': 'The token has expired'
         }), 401
     
+    # Callback for invalid JWT in request header
     @jwt.invalid_token_loader
     def invalid_token_callback(error_string):
         return jsonify({

@@ -1,5 +1,8 @@
 from server.entity.message import Message
 
+'''
+Data Transfer Object for Chat Message
+'''
 class MessageDTO:
     def __init__(self,message: Message):
         self.message = message.message

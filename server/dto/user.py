@@ -1,5 +1,8 @@
 from server.entity.user import User
 
+'''
+Data Transfer Object for User Details
+'''
 class UserDTO:
 
     def __init__(self,user: User, access_token: str):

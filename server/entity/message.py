@@ -2,6 +2,10 @@ from datetime import datetime, timezone
 
 from server.database import db
 
+'''
+SQL Alchemy Model corresponding to the "messages" table in the MySQL database, to store the message history
+chat_id linked (foreign key) to id in the "chats" table
+'''
 class Message(db.Model):
     __tablename__ = 'messages'
     __table_args__ = {'extend_existing': True}

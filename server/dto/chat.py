@@ -1,5 +1,8 @@
 from server.entity.chat import Chat
 
+'''
+Data Transfer Object for Chat Details
+'''
 class ChatDTO:
     def __init__(self,chat: Chat) -> None:
         self.id = chat.id

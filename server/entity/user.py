@@ -1,5 +1,8 @@
 from server.database import db
 
+'''
+SQL Alchemy Model corresponding to the "messages" table in the MySQL database, to store the user accounts
+'''
 class User(db.Model):
     __tablename__ = 'users'
     __table_args__ = {'extend_existing': True}
