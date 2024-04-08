@@ -27,11 +27,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Prerequisites
 
-What things you need to install the software and how to install them:
-
-MySQL (A GUI like MySQL Workbench would be useful but not required)
-Node.js and npm
-Python >= 3.6
+1. [MySQL](https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
+2. [Node.js and npm](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs)
+3. [Python >= 3.6](https://www.python.org/downloads/)
 
 Please install the above prerequisites before proceeding with the following steps.
 
