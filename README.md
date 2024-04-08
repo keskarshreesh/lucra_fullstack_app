@@ -89,7 +89,7 @@ https://github.com/keskarshreesh/lucra_fullstack_app/assets/29220846/d1255c5a-94
 2. **Allow AI model selection**: <br>
   Allow the user to select between different AI models to chat with
 3. **Chat History**: <br>
-  Allow user to view their previous chats. They're already stored in the database, corresponding UX and APIs will be built.
+  Allow user to view their previous chats. They're already stored in the database, corresponding UX and APIs will be built, currently user can only view and resume most recent chat
 
 
 
