@@ -83,6 +83,15 @@ Please refer to the demo video below for a demonstration of all steps listed bel
 # Demo
 https://github.com/keskarshreesh/lucra_fullstack_app/assets/29220846/d1255c5a-9432-4479-9aae-a1cde5e77598
 
+# Architecture
+## Database
+1. **users**:<br>
+  Stores the user accounts, each user account includes `username`, `firstname` and `lastname` of user, user `email`, hashed `password` and `id` (primary key)
+2. **chats**:<br>
+  Stores the chat history, each record consists of `id` (primary key), `chat_title` (randomly generated UUID, potentially could be replaced by a chat summary), `user_id` (foreign key linked to `users`), indicating the user who started the chat and `created_at` indicating the timestamp at which the chat was created.
+3. **messages**:<br>
+  Stores the message history, each record consists of `id` (primary key), `message` (content of message), `chat_role` (message sent by `user` or `assistant`), `chat_id` (foreign key linked to `chats`), indicating the chat which the message belongs to and `created_at` indicating the timestamp at which the message was created.
+
 # Future Work
 1. **Improve application security**: <br>
   Login and session management to be implemented through cookies, currently implemented through `JWT` which can be vulnerable to `CSRF` attacks
