@@ -36,23 +36,22 @@ Please install the above prerequisites before proceeding with the following step
 ## Installing and Running Locally
 ### Installation:
 #### Server
-(Run from server directory)
+(Run from server directory)<br>
 `pip install -r requirements.txt`
 #### Client
-(Run from client directory)
-`cd client`
+(Run from client directory)<br>
 `npm install`
 
 ### Local Setup:
 #### Database 
-(Run from database directory, replace `yourusername` with your database username):
+(Run from database directory, replace `yourusername` with your database username):<br>
 `mysql -u yourusername -p < create_fs_app_db.sql`
 #### Server
 Replace the following values in the .env file in the server directory:
 1. HF_API_TOKEN:
   Obtain an API token from the HuggingFace website and add it here, please follow the instructions on [HuggingFace](https://huggingface.co/docs/hub/en/security-tokens)
 2. DB_PASSWORD:
-  Change to your MySQL password, this is set during installation
+  Change to your MySQL password, this is set during installation<br>
 `python start.py`
 #### Client
 `npm start`
