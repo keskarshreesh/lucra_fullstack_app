@@ -85,6 +85,7 @@ https://github.com/keskarshreesh/lucra_fullstack_app/assets/29220846/d1255c5a-94
 
 # Architecture
 ## Database
+The database is a MySQL DB, consisting of the following tables: 
 1. **users**:<br>
   Stores the user accounts, each user account includes `username`, `firstname` and `lastname` of user, user `email`, hashed `password` and `id` (primary key)
 2. **chats**:<br>
@@ -93,6 +94,7 @@ https://github.com/keskarshreesh/lucra_fullstack_app/assets/29220846/d1255c5a-94
   Stores the message history, each record consists of `id` (primary key), `message` (content of message), `chat_role` (message sent by `user` or `assistant`), `chat_id` (foreign key linked to `chats`), indicating the chat which the message belongs to and `created_at` indicating the timestamp at which the message was created.
 
 ## Server
+The server is developed with **Python**,**Flask**,**PyMySQL** and **SQLAlchemy**, it consists of the following components:
 ### Controllers
 Controllers are the "entry-points" for requests coming from the client, they extract request payload and handle initial JWT validation, return response after application logic has been executed
 1. **auth_bp**:<br>
@@ -112,7 +114,7 @@ These are models for the MySQL database tables created for the Object Relational
 These are the objects used to transfer data as JSON payload in response to client requests. They capture essential data from entities that is needed on the client and return it in a serializable format.
 
 ## Client
-The Client is a React application, with the following important parts:
+The Client is a React application (**React.js**, **Typescript**), with the following important parts:
 ### App Context
 This contains the data and utilities accessible throughout the application, i.e Authenticated User data and handlers to manage it, waiting spinners and update alerts.
 ### localStorage
