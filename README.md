@@ -80,6 +80,9 @@ Please refer to the demo video below for a demonstration of all steps listed bel
 5. **Logout**: <br>
   The user can log out of the application, which will erase their current session and they will need to sign in again to access the application
 
+# Demo
+(...Coming Soon!)
+
 # Future Work
 1. **Improve application security**: <br>
   Login and session management to be implemented through cookies, currently implemented through `JWT` which can be vulnerable to `CSRF` attacks
