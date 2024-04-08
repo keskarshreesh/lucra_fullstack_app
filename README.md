@@ -21,6 +21,7 @@ Supported features:
       - [Client](#client)
 - [Application Flow](#application-flow)
 - [Demo](#demo-video)
+- [Future Work](#future-work)
 
 
 # Getting Started
@@ -65,6 +66,17 @@ After making the above changes, run the start script from the `server` directory
 Start the Client app from the `client` directory<br>
 `npm start` (Client runs on the port `3000`)<br>
 
+# Application Flow
+Please refer to the demo video below for a demonstration of all steps listed below:
+1. **Sign Up**: 
+  When the user lands on the application for the first time, a Sign In page opens up by default. First time users are directed to Sign Up for a new user account by clicking on the link at the bottom of the Sign In box.
+2. **Sign In**:
+  After successful Sign Up, user is directed to Proceed with Log In, where they can sign in with the credentials provided during Sign Up
+  Signing in successfully will generate a `JWT` access token which is persisted in the user's browser, which allows the user session to remain active for an hour without having to sign in again. 
+3. **Start New Chat**:
+  This will open up an empty chat window where the user can start a new chat with Mistral AI
+4. **Get Last Chat**:
+  If the user logs out or leaves the application, they can continue their last chat from where they left off. For a first time user, user will be prompted to create a new chat. 
 
 
 
