@@ -81,7 +81,7 @@ Please refer to the demo video below for a demonstration of all steps listed bel
   The user can log out of the application, which will erase their current session and they will need to sign in again to access the application
 
 # Demo
-(...Coming Soon!)
+https://github.com/keskarshreesh/lucra_fullstack_app/assets/29220846/d1255c5a-9432-4479-9aae-a1cde5e77598
 
 # Future Work
 1. **Improve application security**: <br>
