@@ -1,0 +1,1 @@
+MESSAGE_RESPONSE_FAILED = "Error getting response, please try again"
