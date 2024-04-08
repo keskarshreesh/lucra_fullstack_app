@@ -45,8 +45,9 @@ Please install the above prerequisites before proceeding with the following step
 `npm install`
 
 ### Local Setup:
-#### Database 
-(Run from database directory, replace `yourusername` with your database username):<br>
+#### Database
+Verify that MySQL is up and running in your system, the process varies for different OS, please refer to MySQL documentation <br>
+After verifying MySQL status, run the following from database directory, replace `yourusername` with your database username:<br>
 `mysql -u yourusername -p < create_fs_app_db.sql`
 #### Server
 Replace the following values in the .env file in the `server` directory:
@@ -56,7 +57,7 @@ Replace the following values in the .env file in the `server` directory:
   Change to your MySQL username, default is generally `root`
 3. `DB_PASSWORD`:
   Change to your MySQL password, this is set during installation<br>
-4. Other fields like `HF_API_MAX_TOKENS` and `HF_CHAT_MODEL` can be changed for fine-grained control of the application behaviour or to use a different model
+4. Other fields like `HF_API_MAX_TOKENS` and `HF_CHAT_MODEL` can be changed for fine-grained control of the application behaviour or to use a different model, `DB_HOST` and `DB_PORT` are generally the same for a locally running MySQL instance, change if customized during installation
 
 Run the start script from the `server` directory:<br>
 Server runs on port `5000`<br>
