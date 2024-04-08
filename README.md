@@ -85,7 +85,7 @@ https://github.com/keskarshreesh/lucra_fullstack_app/assets/29220846/d1255c5a-94
 
 # Architecture
 ## Database
-The database is a MySQL DB, consisting of the following tables: 
+This is a **MySQL** database, consisting of the following tables: 
 1. **users**:<br>
   Stores the user accounts, each user account includes `username`, `firstname` and `lastname` of user, user `email`, hashed `password` and `id` (primary key)
 2. **chats**:<br>
