@@ -130,7 +130,7 @@ const Home = () => {
                     flexDirection: 'column',
                     alignItems: 'end',
                     width: "100%",
-                    marginLeft: 45
+                    marginLeft: 65
                 }}
             >
                 <Button onClick={handleLogout}>
