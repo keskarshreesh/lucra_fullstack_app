@@ -92,6 +92,34 @@ https://github.com/keskarshreesh/lucra_fullstack_app/assets/29220846/d1255c5a-94
 3. **messages**:<br>
   Stores the message history, each record consists of `id` (primary key), `message` (content of message), `chat_role` (message sent by `user` or `assistant`), `chat_id` (foreign key linked to `chats`), indicating the chat which the message belongs to and `created_at` indicating the timestamp at which the message was created.
 
+## Server
+### Controllers
+Controllers are the "entry-points" for requests coming from the client, they extract request payload and handle initial JWT validation, return response after application logic has been executed
+1. **auth_bp**:<br>
+These endpoints handle all authentication and user related requests, including user account creation, login and JWT access token creation, validating JWT token and returning user details.
+2. **chat_bp**:<br>
+These endpoints handle requests for creating and retrieving chat details.
+3. **messages_bp**:<br>
+These endpoints handle requests for fetching all past messages for a chat and getting responses from the AI model.
+
+### Services
+Services execute the core application logic after receiving request data from the controllers. They handle database interactions and requests to external services (HuggingFace). They mirror the Controllers in structure.
+
+### Entitites
+These are models for the MySQL database tables created for the Object Relational Mapping (ORM) utility, i.e **SQL Alchemy**. They allow execution of database transactions implicitly through the Python code as opposed to SQL queries. There is one entity for each database table.
+
+### Data-Transfer Objects (DTOs)
+These are the objects used to transfer data as JSON payload in response to client requests. They capture essential data from entities that is needed on the client and return it in a serializable format.
+
+## Client
+The Client is a React application, with the following important parts:
+### App Context
+This contains the data and utilities accessible throughout the application, i.e Authenticated User data and handlers to manage it, waiting spinners and update alerts.
+### localStorage
+In this application, we use the browser `localStorage` to store the JWT (access token), which is used by the server to authenticate client requests and for session management. The JWT is added to `localStorage` during login, removed during logout and accessed by each client request
+### Components
+These are the core of the React application, they manage user inputs, user session and sending requests to and managing responses from the server.
+
 # Future Work
 1. **Improve application security**: <br>
   Login and session management to be implemented through cookies, currently implemented through `JWT` which can be vulnerable to `CSRF` attacks
