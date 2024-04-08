@@ -13,13 +13,19 @@ Supported features:
   - [Prerequisites](#prerequisites)
   - [Installing and Running Locally](#install-and-run)
     -[Installation](#installation)
+      -[Server](#server)
+      -[Client](#client)
     -[Local Setup](#local-setup)
+      -[Database](#database)
+      -[Server](#server)
+      -[Client](#client)
 
-## Getting Started
+
+# Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Prerequisites
+## Prerequisites
 
 What things you need to install the software and how to install them:
 
@@ -29,25 +35,28 @@ Python >= 3.6
 
 Please install the above prerequisites before proceeding with the following steps.
 
-### Installing and Running Locally
-## Installation:
-Server (Run from server directory):
-pip install -r requirements.txt
-Client (Run from client directory):
-cd client
-npm install
+## Installing and Running Locally
+### Installation:
+#### Server
+(Run from server directory)
+`pip install -r requirements.txt`
+#### Client
+(Run from client directory)
+`cd client`
+`npm install`
 
-## Local Setup:
-**Database** (Run from database directory, replace `yourusername` with your database username):
+### Local Setup:
+#### Database 
+(Run from database directory, replace `yourusername` with your database username):
 `mysql -u yourusername -p < create_fs_app_db.sql`
-**Server**:
+#### Server
 Replace the following values in the .env file in the server directory:
 1. HF_API_TOKEN:
   Obtain an API token from the HuggingFace website and add it here, please follow the instructions on [HuggingFace](https://huggingface.co/docs/hub/en/security-tokens)
 2. DB_PASSWORD:
   Change to your MySQL password, this is set during installation
 `python start.py`
-**Client**:
+#### Client
 `npm start`
 
 
