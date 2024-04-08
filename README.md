@@ -118,7 +118,8 @@ This contains the data and utilities accessible throughout the application, i.e 
 ### localStorage
 In this application, we use the browser `localStorage` to store the JWT (access token), which is used by the server to authenticate client requests and for session management. The JWT is added to `localStorage` during login, removed during logout and accessed by each client request
 ### Components
-These are the core of the React application, they manage user inputs, user session and sending requests to and managing responses from the server.
+These are the core of the React application, they manage user inputs, user session and sending requests to and managing responses from the server.<br>
+Each component can be thought of as corresponding to one App screen (i.e Login/Signup, Home, Chat, etc., in addition to common components used throughout the application).
 
 # Future Work
 1. **Improve application security**: <br>
