@@ -36,6 +36,7 @@ const Home = () => {
                         spinner?.handleProcessing(false);
                         if(error.response && error.response.status === 401)
                         {
+                            //Re-login
                             localStorage.removeItem("jwt");
                             navigate("/login");
                         }
@@ -103,6 +104,7 @@ const Home = () => {
         handleStartNewChat();
     }
 
+    // Set user details to null in app context and remove JWT in local storage
     const handleLogout = () => {
         localStorage.removeItem("jwt");
         if(setUserDetails) setUserDetails(null);

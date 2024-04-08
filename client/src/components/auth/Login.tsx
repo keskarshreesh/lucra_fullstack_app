@@ -46,6 +46,7 @@ const Login = () => {
         .then(response => {
             spinner?.handleProcessing(false);
             setLoginError(false);
+            // Set user details in app context and JWT in local storage
             if(setUserDetails) {
                 setUserDetails({
                     username: response.data.username,
