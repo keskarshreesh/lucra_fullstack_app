@@ -94,7 +94,7 @@ The database is a MySQL DB, consisting of the following tables:
   Stores the message history, each record consists of `id` (primary key), `message` (content of message), `chat_role` (message sent by `user` or `assistant`), `chat_id` (foreign key linked to `chats`), indicating the chat which the message belongs to and `created_at` indicating the timestamp at which the message was created.
 
 ## Server
-The server is developed with **Python**,**Flask**,**PyMySQL** and **SQLAlchemy**, it consists of the following components:
+The server is developed with **Python**, **Flask**, **PyMySQL** and **SQLAlchemy**, it consists of the following components:
 ### Controllers
 Controllers are the "entry-points" for requests coming from the client, they extract request payload and handle initial JWT validation, return response after application logic has been executed
 1. **auth_bp**:<br>
