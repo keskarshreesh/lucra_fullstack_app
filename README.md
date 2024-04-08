@@ -19,6 +19,8 @@ Supported features:
       - [Database](#database)
       - [Server](#server)
       - [Client](#client)
+- [Application Flow](#application-flow)
+- [Demo](#demo-video)
 
 
 # Getting Started
@@ -36,10 +38,10 @@ Please install the above prerequisites before proceeding with the following step
 ## Installing and Running Locally
 ### Installation:
 #### Server
-(Run from server directory)<br>
+(Run from `server` directory)<br>
 `pip install -r requirements.txt`
 #### Client
-(Run from client directory)<br>
+(Run from `client` directory)<br>
 `npm install`
 
 ### Local Setup:
@@ -47,14 +49,22 @@ Please install the above prerequisites before proceeding with the following step
 (Run from database directory, replace `yourusername` with your database username):<br>
 `mysql -u yourusername -p < create_fs_app_db.sql`
 #### Server
-Replace the following values in the .env file in the server directory:
-1. HF_API_TOKEN:
+Replace the following values in the .env file in the `server` directory:
+1. `HF_API_TOKEN`:
   Obtain an API token from the HuggingFace website and add it here, please follow the instructions on [HuggingFace](https://huggingface.co/docs/hub/en/security-tokens)
-2. DB_PASSWORD:
+2. `DB_USERNAME`:
+  Change to your MySQL username, default is generally `root`
+3. `DB_PASSWORD`:
   Change to your MySQL password, this is set during installation<br>
+4. Other fields like `HF_API_MAX_TOKENS` and `HF_CHAT_MODEL` can be changed for fine-grained control of the application behaviour or to use a different model
+
+Run the start script from the `server` directory:<br>
+Server runs on port `5000`<br>
 `python start.py`
 #### Client
-`npm start`
+Start the Client app from the `client` directory<br>
+`npm start`<br>
+Client runs on the port `3000`<br>
 
 
 
